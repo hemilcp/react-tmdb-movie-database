@@ -51,16 +51,19 @@ class App extends Component {
         revenue: data.revenue,
         backdrop: data.backdrop_path
       })
+          console.log(data);
+
     });
+
   }
 
   fetchMovieID(movieID){
-    let url = 'https://api.themoviedb.org/3/movie/${movieID}?&api_key=f27c71861f12d7410195cd681a70fa8b'
+    let url = 'https://api.themoviedb.org/3/movie/'+movieID+'?&api_key=f27c71861f12d7410195cd681a70fa8b'
     this.fetchApi(url);
   }
 
   componentDidMount(){
-    let url = 'https://api.themoviedb.org/3/movie/${this.state.movieID}?&api_key=f27c71861f12d7410195cd681a70fa8b'
+    let url = 'https://api.themoviedb.org/3/movie/'+ this.state.movieID +'?&api_key=f27c71861f12d7410195cd681a70fa8b'
     this.fetchApi(url);
   }
 }

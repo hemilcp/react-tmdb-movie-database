@@ -30,7 +30,7 @@ class Card extends Component {
 	          	totalRevenue = numeral(data.revenue).format('($0,0)');
 	          };
 
-	          if(data.poster === 'null'){
+	          if(data.poster == 'null'){
 	          	posterIMG = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSols5HZxlQWyS9JY5d3_L9imbk0LiziHiyDtMZLHt_UNzoYUXs2g';
 	          }
 
@@ -72,7 +72,7 @@ class Card extends Component {
 function nestedDataToString(nestedData){
 	let nestedArray = [], resultString;
 
-	nestedData.foreach(function(item,i){
+	nestedArray.forEach(function(item,i){
 		nestedArray.push(item.name);
 	});
 
